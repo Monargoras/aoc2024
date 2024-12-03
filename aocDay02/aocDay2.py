@@ -55,6 +55,7 @@ def checkReport(report, recursive = False):
         index += 1
     return safeReport
 
+
 if __name__ == '__main__':
     #partOne('./aocDay02/examplePartOne.txt')
     #partOne('./aocDay02/input.txt')
