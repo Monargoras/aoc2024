@@ -1,5 +1,6 @@
 import re
 
+
 def partOne(filePath):
     with open(filePath) as input:
         txt = input.read()
