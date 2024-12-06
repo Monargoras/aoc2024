@@ -7,6 +7,7 @@ def partOne(filePath):
         directions = [(0, -1), (1, 0), (0, 1), (-1, 0)]
         direction = 0
         x, y = coordinates
+        map[y][x] = 'X'
         while True:
             if y <= 0 or y >= len(map) - 1 or x <= 0 or x >= len(map[y]) - 1:
                 break
@@ -20,8 +21,6 @@ def partOne(filePath):
             y += directions[direction][1]
             map[y][x] = 'X'
         xCount = sum(row.count('X') for row in map)
-        for row in map:
-            print(''.join(row))
         print(xCount)
 
 
@@ -32,6 +31,6 @@ def partTwo(filePath):
 
 if __name__ == '__main__':
     #partOne('./aocDay06/examplePartOne.txt')
-    partOne('./aocDay06/input.txt')
-    #partTwo('./aocDay06/examplePartTwo.txt')
+    #partOne('./aocDay06/input.txt')
+    partTwo('./aocDay06/examplePartTwo.txt')
     #partTwo('./aocDay06/input.txt')
