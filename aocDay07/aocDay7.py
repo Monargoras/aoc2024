@@ -3,43 +3,75 @@ def partOne(filePath):
         lines = input.readlines()
         lines = [line.strip() for line in lines]
         sum = 0
-        for equation in lines:
-            result = int(equation.split(':')[0])
-            factors = [int(x) for x in equation.split(':')[1].split(' ') if x != '']
-            for i in range(0, len(factors) - 1):
-                if calc(result, factors, i):
-                    sum += result
-                    break
+        resultFactorTuples = [(int(equation.split(':')[0]), [int(x) for x in equation.split(':')[1].split(' ') if x != '']) for equation in lines]
+        for (result, factors) in resultFactorTuples:
+            if calcOne(result, factors):
+                sum += result
         print(sum)
 
 
-def calc(result, factors, startIndex):
-    for j in range(0 if startIndex == 0 else 1, len(factors)):
-        # multiply j times starting from startIndex, additions before and after
-        tmpRes = factors[0]
-        calcString = str(factors[0])
-        for k in range(0, len(factors) - 1):
-            if k >= startIndex and k < startIndex + j:
-                tmpRes *= factors[k + 1]
-                calcString += ' * ' + str(factors[k + 1])
-            else:
-                tmpRes += factors[k + 1]
-                calcString += ' + ' + str(factors[k + 1])
-        # print debug vis
-        if result == 7290:
-            print(result, '=', '(', calcString, ')', '=', tmpRes, startIndex, j)
-        if tmpRes == result:
-            return True
+def calcOne(result, values, current=None):
+    if current is None:
+        current = values[0]
+        values = values[1:]
+    
+    if not values:
+        return current == result
+    
+    next_value = values[0]
+    remaining_values = values[1:]
+
+    # addition
+    if calcOne(result, remaining_values, current + next_value):
+        return True
+
+    # multiplication
+    if calcOne(result, remaining_values, current * next_value):
+        return True
+
     return False
 
 
 def partTwo(filePath):
     with open(filePath) as input:
-        pass
+        lines = input.readlines()
+        lines = [line.strip() for line in lines]
+        sum = 0
+        resultFactorTuples = [(int(equation.split(':')[0]), [int(x) for x in equation.split(':')[1].split(' ') if x != '']) for equation in lines]
+        for (result, factors) in resultFactorTuples:
+            if calcTwo(result, factors):
+                sum += result
+        print(sum)
+
+
+def calcTwo(result, values, current=None):
+    if current is None:
+        current = values[0]
+        values = values[1:]
+    
+    if not values:
+        return current == result
+    
+    next_value = values[0]
+    remaining_values = values[1:]
+
+    # addition
+    if calcTwo(result, remaining_values, current + next_value):
+        return True
+
+    # multiplication
+    if calcTwo(result, remaining_values, current * next_value):
+        return True
+    
+    # concatenation
+    if calcTwo(result, remaining_values, int(str(current) + str(next_value))):
+        return True
+
+    return False
 
 
 if __name__ == '__main__':
-    partOne('./aocDay07/examplePartOne.txt')
-    partOne('./aocDay07/input.txt')
+    #partOne('./aocDay07/examplePartOne.txt')
+    #partOne('./aocDay07/input.txt')
     #partTwo('./aocDay07/examplePartTwo.txt')
-    #partTwo('./aocDay07/input.txt')
+    partTwo('./aocDay07/input.txt')
