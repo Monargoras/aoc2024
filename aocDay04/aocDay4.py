@@ -59,7 +59,7 @@ def checkCrossMas(lines, y, x):
 
 
 if __name__ == '__main__':
-    #partOne('./aocDay04/examplePartOne.txt')
+    #partOne('./aocDay04/example.txt')
     #partOne('./aocDay04/input.txt')
-    #partTwo('./aocDay04/examplePartTwo.txt')
+    #partTwo('./aocDay04/example.txt')
     partTwo('./aocDay04/input.txt')
