@@ -97,7 +97,7 @@ def getBrokenRules(printOrder, afterRules):
 
 
 if __name__ == '__main__':
-    #partOne('./aocDay05/examplePartOne.txt')
+    #partOne('./aocDay05/example.txt')
     #partOne('./aocDay05/input.txt')
-    #partTwo('./aocDay05/examplePartTwo.txt')
+    #partTwo('./aocDay05/example.txt')
     partTwo('./aocDay05/input.txt')
