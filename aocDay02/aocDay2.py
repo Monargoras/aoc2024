@@ -57,7 +57,7 @@ def checkReport(report, recursive = False):
 
 
 if __name__ == '__main__':
-    #partOne('./aocDay02/examplePartOne.txt')
+    #partOne('./aocDay02/example.txt')
     #partOne('./aocDay02/input.txt')
-    #partTwo('./aocDay02/examplePartTwo.txt')
+    #partTwo('./aocDay02/example.txt')
     partTwo('./aocDay02/input.txt')
