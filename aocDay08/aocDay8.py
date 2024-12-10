@@ -64,7 +64,7 @@ def partTwo(filePath):
 
 
 if __name__ == '__main__':
-    #partOne('./aocDay08/examplePartOne.txt')
+    #partOne('./aocDay08/example.txt')
     #partOne('./aocDay08/input.txt')
-    #partTwo('./aocDay08/examplePartTwo.txt')
+    #partTwo('./aocDay08/example.txt')
     partTwo('./aocDay08/input.txt')
