@@ -98,7 +98,7 @@ def sublist(sublist, mainList):
 
 
 if __name__ == '__main__':
-    #partOne('./aocDay06/examplePartOne.txt')
+    #partOne('./aocDay06/example.txt')
     #partOne('./aocDay06/input.txt')
-    #partTwo('./aocDay06/examplePartTwo.txt')
+    #partTwo('./aocDay06/example.txt')
     partTwo('./aocDay06/input.txt')
