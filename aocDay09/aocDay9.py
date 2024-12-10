@@ -68,7 +68,7 @@ def getLeftMostDotIndexOfSize(uncomepressedDisk, size):
 
 
 if __name__ == '__main__':
-    #partOne('./aocDay09/examplePartOne.txt')
+    #partOne('./aocDay09/example.txt')
     #partOne('./aocDay09/input.txt')
-    #partTwo('./aocDay09/examplePartTwo.txt')
+    #partTwo('./aocDay09/example.txt')
     partTwo('./aocDay09/input.txt')
