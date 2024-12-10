@@ -44,7 +44,7 @@ def isSafeMatch(match, matchesDontObject, matchesDoObject):
 
 
 if __name__ == '__main__':
-    #partOne('./aocDay03/examplePartOne.txt')
+    #partOne('./aocDay03/example.txt')
     #partOne('./aocDay03/input.txt')
-    #partTwo('./aocDay03/examplePartTwo.txt')
+    #partTwo('./aocDay03/example.txt')
     partTwo('./aocDay03/input.txt')
