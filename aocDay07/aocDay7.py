@@ -71,7 +71,7 @@ def calcTwo(result, values, current=None):
 
 
 if __name__ == '__main__':
-    #partOne('./aocDay07/examplePartOne.txt')
+    #partOne('./aocDay07/example.txt')
     #partOne('./aocDay07/input.txt')
-    #partTwo('./aocDay07/examplePartTwo.txt')
+    #partTwo('./aocDay07/example.txt')
     partTwo('./aocDay07/input.txt')
